@@ -8,8 +8,6 @@ import jakarta.validation.constraints.*;
 @Entity
 @Data
 @NoArgsConstructor
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
