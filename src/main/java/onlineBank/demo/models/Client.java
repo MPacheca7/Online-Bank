@@ -1,15 +1,17 @@
 package onlineBank.demo.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+@Getter
+@Setter
 @Entity
 @NoArgsConstructor
 public class Client extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long bankAccount_id;
+    @Column(name = "bankAccount_id")
+    private Long bankAccountId;
 
     @OneToOne
     @JoinColumn(name= "bank_account_id")
@@ -20,26 +22,10 @@ public class Client extends User {
         this.bankAccount = bankAccount;
     }
 
-    public Long getBankAccount_id() {
-        return bankAccount_id;
-    }
-
-    public void setBankAccount_id(Long bankAccount_id) {
-        this.bankAccount_id = bankAccount_id;
-    }
-
-    public BankAccount getBankAccount() {
-        return bankAccount;
-    }
-
-    public void setBankAccount(BankAccount bankAccount) {
-        this.bankAccount = bankAccount;
-    }
-
     @Override
     public String toString() {
         return "Client{" +
-                "bankAccount_id=" + bankAccount_id +
+                "bankAccountId=" + bankAccountId +
                 ", bankAccount=" + bankAccount +
                 '}';
     }
