@@ -8,10 +8,6 @@ import lombok.*;
 @Entity
 @NoArgsConstructor
 public class Client extends User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "bankAccount_id")
-    private Long bankAccountId;
 
     @OneToOne
     @JoinColumn(name= "bank_account_id")
@@ -25,8 +21,7 @@ public class Client extends User {
     @Override
     public String toString() {
         return "Client{" +
-                "bankAccountId=" + bankAccountId +
-                ", bankAccount=" + bankAccount +
+                "bankAccount=" + bankAccount +
                 '}';
     }
 }

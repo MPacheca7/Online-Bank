@@ -14,8 +14,7 @@ import lombok.NoArgsConstructor;
 public class BankAccount {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_client")
-    private Long idClient;
+    private Long id;
 
     @NotEmpty
     @Pattern(regexp = "^[A-Z]{2}[0-9]{2}[A-Z0-9]{10,30}$", message = "IBAN invalid")

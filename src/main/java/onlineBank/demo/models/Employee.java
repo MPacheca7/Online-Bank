@@ -13,7 +13,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Employee extends User{
 
-    @Id
     @Column(name = "employee_number")
     private int employeeNumber;
 
