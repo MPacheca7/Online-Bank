@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "bank_account")
 public class BankAccount {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NotEmpty
