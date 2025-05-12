@@ -19,7 +19,7 @@ public class Client extends User {
     @NotEmpty
     private String password;
 
-    public Client(String name, String dni, String email, Role role, BankAccount bankAccount, String password) {
+    public Client(String name, String dni, String email, ERole role, BankAccount bankAccount, String password) {
         super(name, dni, email, role);
         this.bankAccount = bankAccount;
         this.password = password;

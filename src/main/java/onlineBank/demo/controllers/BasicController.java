@@ -15,7 +15,7 @@ public class BasicController {
 
     @GetMapping("/public/users")
     public ResponseEntity<String> publicUsers() {
-        return ResponseEntity.ok("Bienvenido: " + "UserName*******PONERLO+");
+        return ResponseEntity.ok("Bienvenido: ");
     }
 
     @GetMapping("/admin")

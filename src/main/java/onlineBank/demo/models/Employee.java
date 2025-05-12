@@ -23,7 +23,7 @@ public class Employee extends User{
     @NotEmpty
     private String password;
 
-    public Employee(String name, String dni, String email, Role role, int employeeNumber, String password) {
+    public Employee(String name, String dni, String email, ERole role, int employeeNumber, String password) {
         super(name, dni, email, role);
         this.employeeNumber = employeeNumber;
         this.password = password;

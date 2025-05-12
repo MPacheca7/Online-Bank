@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+// ESTA CLASE YA NO SE USA. SE PUEDE BORRAR LA TABLA TAMBIEN
 
 @Entity
 @Data
@@ -11,7 +12,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Role {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Enumerated(EnumType.STRING)

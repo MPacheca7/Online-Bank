@@ -21,8 +21,9 @@ public class ClientServiceTest {
 
         holder.setName("Miguel");
         holder.setPassword("123");
-        holder.setDni("12345678A");
+        holder.setDni("42345678A");
         holder.setEmail("holder@prueba.com");
+        holder.setRole(ERole.ROLE_HOLDER);
 
         clientService.saveClient(holder);
     }
