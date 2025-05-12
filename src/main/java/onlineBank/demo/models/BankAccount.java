@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "bank_account")
 public class BankAccount {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,6 +17,7 @@ public class BankAccount {
 
     @NotEmpty
     @Pattern(regexp = "^[A-Z]{2}[0-9]{2}[A-Z0-9]{10,30}$", message = "IBAN invalid")
+    @Column(unique = true)
     private String IBAN;
 
     @OneToOne(mappedBy="bankAccount")

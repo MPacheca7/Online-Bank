@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class JWTServiceTest {
 
     @Autowired
-    UserRepository userRepository;
+    ClientRepository clientRepository;
 
     @Autowired
     JwtService jwtService;

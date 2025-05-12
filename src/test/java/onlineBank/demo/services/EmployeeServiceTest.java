@@ -15,6 +15,19 @@ public class EmployeeServiceTest {
     @Test
     @DisplayName("New employee")
     public void generateEmployee(){
-        Employee employee = new Employee("Pedro", "00000000B", "employee1@prueba.com", ERole.ROLE_ADMIN, 101010, "1234");
+        Employee employee = new Employee(
+                "Alfredo",
+                "11000000Z",
+                "employee3@prueba.com",
+                ERole.ROLE_ADMIN,
+                "n552233",
+                "1234");
+
+        try {
+            employeeService.saveEmployee(employee);
+            System.out.println("Employee: " + employee);
+        } catch (Exception e) {
+             e.printStackTrace();
+        }
     }
 }

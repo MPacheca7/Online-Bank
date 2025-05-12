@@ -13,10 +13,10 @@ public class BankAccountRepositoryTest {
     private BankAccountRepository bankAccountRepository;
 
     @Test
-    @DisplayName("Nuevo IBAN")
+    @DisplayName("New IBAN")
     public void generateISBN(){
         BankAccount bankAccount = new BankAccount();
-        bankAccount.setIBAN("ES7620770024003102575766");
+        bankAccount.setIBAN("DE89370400440532013000");
         bankAccountRepository.save(bankAccount);
     }
 }

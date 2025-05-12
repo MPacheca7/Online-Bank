@@ -18,12 +18,12 @@ import java.util.Collection;
 public class Employee extends User{
 
     @NotEmpty
-    private int employeeNumber;
+    private String employeeNumber;
 
     @NotEmpty
     private String password;
 
-    public Employee(String name, String dni, String email, ERole role, int employeeNumber, String password) {
+    public Employee(String name, String dni, String email, ERole role, String employeeNumber, String password) {
         super(name, dni, email, role);
         this.employeeNumber = employeeNumber;
         this.password = password;
