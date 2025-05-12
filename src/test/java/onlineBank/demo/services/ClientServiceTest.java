@@ -1,28 +1,29 @@
 package onlineBank.demo.services;
 
-
-import onlineBank.demo.models.User;
+import onlineBank.demo.models.Client;
+import onlineBank.demo.models.ERole;
+import onlineBank.demo.models.Role;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class UserServiceTest {
+public class ClientServiceTest {
 
-  /*  @Autowired
-    UserService userService;
+    @Autowired
+    ClientService clientService;
 
     @Test
-    @DisplayName("Nuevo usuario")
-    public void generateUser(){
-        User holder = new User();
+    @DisplayName("New client")
+    public void generateClient(){
+        Client holder = new Client();
+
         holder.setName("Miguel");
+        holder.setPassword("123");
         holder.setDni("12345678A");
         holder.setEmail("holder@prueba.com");
-        holder.setRole("HOLDER");
 
-
-        userService.saveUser(holder);
-    } */
+        clientService.saveClient(holder);
+    }
 }

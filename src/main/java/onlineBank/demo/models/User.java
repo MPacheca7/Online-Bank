@@ -5,6 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import jakarta.validation.constraints.*;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -24,8 +27,9 @@ public class User {
     @Email(message = "Email not find")
     private String email;
 
-    @OneToOne(fetch = FetchType.EAGER)
-    private Role role = new Role();
+    @ManyToOne (fetch = FetchType.EAGER)
+    @JoinColumn(name = "role_id")
+    private Role role;
 
     public User(String name, String dni, String email, Role role) {
         this.name = name;

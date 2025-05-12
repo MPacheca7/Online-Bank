@@ -4,9 +4,12 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.PrimaryKeyJoinColumn;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Collection;
 
 @Getter
 @Setter
@@ -14,18 +17,23 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Employee extends User{
 
-    @Column(name = "employee_number")
+    @NotEmpty
     private int employeeNumber;
 
-    public Employee(String name, String dni, String email, Role role, int employeeNumber) {
+    @NotEmpty
+    private String password;
+
+    public Employee(String name, String dni, String email, Role role, int employeeNumber, String password) {
         super(name, dni, email, role);
         this.employeeNumber = employeeNumber;
+        this.password = password;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
                 "employeeNumber=" + employeeNumber +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
