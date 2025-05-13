@@ -1,8 +1,5 @@
 package onlineBank.demo.controllers;
-
-import onlineBank.demo.DTO.ClientDTO;
 import onlineBank.demo.models.Client;
-import onlineBank.demo.repository.ClientRepository;
 import onlineBank.demo.services.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,6 +12,11 @@ public class ClientController {
 
     @Autowired
     ClientService clientService;
+
+    @GetMapping("/public/users")
+    public ResponseEntity<String> publicUsers() {
+        return ResponseEntity.ok("Bienvenido al tu banco de confianza");
+    }
 
     @PostMapping("/register/accounts")
     @ResponseStatus(HttpStatus.CREATED)

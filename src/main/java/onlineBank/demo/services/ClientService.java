@@ -1,17 +1,13 @@
 package onlineBank.demo.services;
 
-
-import onlineBank.demo.DTO.ClientDTO;
 import onlineBank.demo.models.BankAccount;
 import onlineBank.demo.models.Client;
 import onlineBank.demo.models.ERole;
 import onlineBank.demo.repository.BankAccountRepository;
 import onlineBank.demo.repository.ClientRepository;
-import onlineBank.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import java.util.Optional;
 import java.util.Random;
 

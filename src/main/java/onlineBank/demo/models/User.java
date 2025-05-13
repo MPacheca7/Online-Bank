@@ -5,9 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import jakarta.validation.constraints.*;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 @Entity
 @Data
 @NoArgsConstructor
