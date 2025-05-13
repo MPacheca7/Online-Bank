@@ -20,6 +20,8 @@ public class BankAccount {
     @Column(unique = true)
     private String IBAN;
 
+    private String accountNumber;
+
     @OneToOne(mappedBy="bankAccount")
     private Client client;
 }
