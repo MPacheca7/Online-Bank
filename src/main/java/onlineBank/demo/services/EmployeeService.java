@@ -75,4 +75,11 @@ public class EmployeeService {
         return clientRepository.save(existingHolder);
     }
 
+    public void deleteClientById(Long id) {
+        if (!clientRepository.existsById(id)) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Holder not found");
+        }
+        clientRepository.deleteById(id);
+    }
+
 }

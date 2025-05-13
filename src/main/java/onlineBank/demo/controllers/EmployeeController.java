@@ -24,11 +24,6 @@ public class EmployeeController {
         return ResponseEntity.ok("Access correct");
     }
 
-    @GetMapping("/private/admin")
-    public ResponseEntity<String> cosasImportantes() {
-        return ResponseEntity.ok("Private access correct");
-    }
-
     @PostMapping("/register/admin")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Employee> create(@RequestBody Employee employee) {
@@ -49,4 +44,12 @@ public class EmployeeController {
         Client newInfoClient = employeeService.changeInfo(id, clientDTO);
         return ResponseEntity.ok(newInfoClient);
     }
+
+    @DeleteMapping("/admin/delete-holder/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<Void> changeInfo(@PathVariable Long id){
+        employeeService.deleteClientById(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }
