@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 @SpringBootTest
 public class ClientServiceTest {
 
@@ -27,13 +29,14 @@ public class ClientServiceTest {
 
         Client holder = new Client();
 
-        holder.setName("Armando");
+        holder.setName("Maria");
         holder.setPassword("121");
-        holder.setDni("22345678A");
+        holder.setDni("21111111A");
         holder.setEmail("holder1@prueba.com");
         holder.setRole(ERole.ROLE_HOLDER);
         holder.setBankAccount(bankAccount);
 
         clientService.saveClient(holder);
+        assertTrue(holder.getPassword().startsWith("$2a$"));
     }
 }

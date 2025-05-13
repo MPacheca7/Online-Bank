@@ -12,16 +12,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class JWTServiceTest {
 
     @Autowired
-    ClientRepository clientRepository;
-
-    @Autowired
     JwtService jwtService;
 
     @Test
     @DisplayName("Generar Token")
     void generateToken(){
         String token = jwtService.generateToken("Gema", "[ROLE_ADMIN]");
-
         System.out.println("El token: " + token);
     }
 }

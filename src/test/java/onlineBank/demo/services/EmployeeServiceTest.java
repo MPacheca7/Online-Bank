@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 @SpringBootTest
 public class EmployeeServiceTest {
     @Autowired
@@ -16,8 +18,8 @@ public class EmployeeServiceTest {
     @DisplayName("New employee")
     public void generateEmployee(){
         Employee employee = new Employee(
-                "Alfredo",
-                "11000000Z",
+                "Armando",
+                "21000000A",
                 "employee3@prueba.com",
                 ERole.ROLE_ADMIN,
                 "n552233",
@@ -29,5 +31,6 @@ public class EmployeeServiceTest {
         } catch (Exception e) {
              e.printStackTrace();
         }
+        assertTrue(employee.getPassword().startsWith("$2a$"));
     }
 }
