@@ -30,7 +30,7 @@ public class ClientServiceTest {
     @DisplayName("New client asign IBAN")
     public void generateClient(){
         BankAccount bankAccount = new BankAccount();
-        bankAccount.setIBAN("DE89370400440532013000");
+        bankAccount.setIBAN("ES893704004405320132587");
         bankAccountRepository.save(bankAccount);
 
         Client holder = new Client();

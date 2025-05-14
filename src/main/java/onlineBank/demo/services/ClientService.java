@@ -62,5 +62,4 @@ public class ClientService {
     public Optional<Client> getByClientName(String name){
         return clientRepository.findByName(name);
     }
-
 }
