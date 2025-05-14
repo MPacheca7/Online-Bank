@@ -6,21 +6,23 @@ través de una API REST orientada a la seguridad y buenas prácticas.
 # ◍ Funcionalidades principales
 ➠ *Registro de clientes con generación automática de IBAN*
 
-➠ *Registro de empleados (con número de empleado generado internamente)*
+➠ *Registro de empleados `(con número de empleado generado internamente)`*
 
 ➠ *Gestión de Admin:*
 
-`Modificación parcial o total de clientes (usando PUT y PATCH)`
++ `Modificación parcial o total de clientes (usando PUT y PATCH)`
 
-`Eliminación de clientes por parte de un administrador`
++ `Eliminación de clientes por parte de un administrador`
 
-➠ *Validación de datos (email, DNI, IBAN, etc.)*
+➠ *Validación de datos `(email, DNI, IBAN, etc.)`*
 
-➠ Respuestas HTTP claras (200, 201, 204, 404)
+➠ Respuestas HTTP claras `(200, 201, 204, 404)`
 
 ➠ Mensajes de bienvenida y rutas públicas
 
 ➠ Pruebas con Postman y tests de integración con JPA
+
+➠ Pruebas de registro de clientes `(POST /bank/holder/register/accounts)`
 
 # ◍ Autenticación
 
