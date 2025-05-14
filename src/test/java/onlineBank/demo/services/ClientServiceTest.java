@@ -1,5 +1,4 @@
 package onlineBank.demo.services;
-
 import onlineBank.demo.models.BankAccount;
 import onlineBank.demo.models.Client;
 import onlineBank.demo.models.ERole;
@@ -12,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Random;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
@@ -67,6 +67,7 @@ public class ClientServiceTest {
 
         clientService.saveClient(holder);
         assertTrue(holder.getPassword().startsWith("$2a$"));
+        assertEquals("72440678Z", holder.getDni());
     }
 
     private String generateAccountNumber() {
