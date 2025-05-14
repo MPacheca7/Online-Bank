@@ -34,6 +34,16 @@ Se ha comenzado a trabajar en la integración de autenticación JWT. Actualmente
 
 **Esta funcionalidad será mejorada e integrada por completo en una futura versión.**
 
+# ◍ Estructura de endpoints
+
++ **GET**📥 `/bank/holder/public/users`	 Ruta pública de bienvenida
++ **POST**➕ `/bank/holder/register/accounts`	Registrar cliente con IBAN
++ **POST**➕ `/bank/register/admin`  Registrar nuevo empleado
++ **GET**📥 `/bank/admin`  Ruta de acceso de administrador
++ **PUT**✏️	`/bank/admin/change-holder/{id}`	Modificar datos completos de cliente
++ **PATCH**🔧 `/bank/admin/change-Info-holder/{id}`	Modificar solo ciertos campos
++ **DELETE**🚮 `/bank/admin/delete-holder/{id}`  Eliminar cliente
+
 # ◍ Tecnologías utilizadas
 
 + Java 21
