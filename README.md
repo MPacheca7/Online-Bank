@@ -57,5 +57,5 @@ Se ha comenzado a trabajar en la integración de autenticación JWT. Actualmente
 
 ![UML.png](UML.png)
 
-
++ Presentación Canva: https://www.canva.com/design/DAGnXb5goJk/Bct0UD-q83378Vae1D-MDA/edit?utm_content=DAGnXb5goJk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 + Tareas de trabajo: ⇝ Link Trello: https://trello.com/b/S45zPNRW/onlinebank
